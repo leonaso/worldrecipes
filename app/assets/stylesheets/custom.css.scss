@@ -23,11 +23,16 @@ $navbar-default-bg: #047033;
 }
 
 .jumbotron {
-  background-image: asset-url('Tomates.jpg');
+  background-image: asset-url('Tomates2.jpg');
   background-size: cover;
   height: 300px;
-  
 }
+
+//.jumbotron p .btn-danger {
+//    color: #fff;
+//    background-color: #047033;
+//    border-color: #047033;
+//}
 
 .jumbotron h1, h2 {
   color: #fff;
@@ -39,6 +44,7 @@ $navbar-default-bg: #047033;
 
 .btn-xlarge {
   background-color: #047033;
+  border-color: #047033;
 }
 
 .btn-xlarge:hover {
