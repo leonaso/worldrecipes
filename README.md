@@ -31,6 +31,7 @@ Things to cover:
     Refactor code - clean-code.
 
 * Layout application
+* 
 
 * Minitest
 
@@ -50,9 +51,21 @@ Things to cover:
     2 runs, 2 assertions, 0 failures, 0 errors, 0 skips.
 
 * Model Tests - Unit-testing
+----------------------------
 
-* 
-
-
-
+Recipe -
+  - recipe should be valid
+  - name should be present
+  - description should be present
+  - chef_id should be present
+  - limitations, validation and restrictions on name and description
+  - 
+  
+Chef -
+  - chefname should be present
+  - email should be present
+  - size restrictions on email and chefname
+  - email address should be valid format
+  - email should be unique, case insensitive
+  - 
 
