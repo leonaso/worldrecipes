@@ -20,10 +20,6 @@ class ChefTest < ActiveSupport::TestCase
     assert_not @chef.valid?
   end
 
-  test "email should be valid" do
-    assert @email.valid?
-  end
-
   test "email should be present" do
     @chef.email = " "
     assert_not @chef.valid?
@@ -42,7 +38,7 @@ class ChefTest < ActiveSupport::TestCase
     end
   end
 
-  test "email should accept valid format" do
+  test "email should not accept invalid format" do
     invalid_emails = %w[user@example MAss@gmail,com M.first@yahoo. john+smith@co+uk.org]
     invalid_emails.each do |invalids|
       @chef.email = invalids
