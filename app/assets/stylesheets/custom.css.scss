@@ -44,7 +44,7 @@ $navbar-default-bg: #047033;
   font-weight: bold;
 }
 
-.btn-xlarge {
+.btn-xlarge, .btn-xlarge a {
   background-color: #047033;
   border-color: #047033;
 }
@@ -72,5 +72,19 @@ $navbar-default-bg: #047033;
 }
 
 .well a {
-  color: #047033;
+//  color: #047033;
+  color: #17aa1c;
 }
+
+.chef_info {
+  margin: 10px;
+}
+
+.matchcolor {
+  color: #047033;
+  //margin-left: 25px;
+  margin-bottom: 45px;
+  padding-left: 15px;
+  //border: 1px solid #047033;  
+}
+
