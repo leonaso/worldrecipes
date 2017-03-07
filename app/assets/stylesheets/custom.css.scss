@@ -72,8 +72,9 @@ $navbar-default-bg: #047033;
 }
 
 .well a {
-//  color: #047033;
-  color: #17aa1c;
+  color: #047033;
+//  color: #17aa1c;
+//  color: #035024;
 }
 
 .chef_info {
@@ -94,4 +95,17 @@ $navbar-default-bg: #047033;
     color: #fff;
   }
 }
+.listing {
+  list-style: none;
+  padding-left: 0;
+}
+
+.chef-title {
+  color: #035024;
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+
+
 
