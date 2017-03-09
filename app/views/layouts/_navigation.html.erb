@@ -8,17 +8,16 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "WorldRecipes", root_path, class: "navbar-brand", id: "logo" %>
+      <%= link_to "AlCarbon", root_path, class: "navbar-brand", id: "logo" %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <% if logged_in? %>        
+        <% if !logged_in? %>
+          <li><%= link_to "Recipes", recipes_path %></li>
+        <% else %>
           <li><%= link_to "Chefs", chefs_path %></li>
-        <% end %>
-        <li><%= link_to "All Recipes", recipes_path %></li>
-        <% if logged_in? %>        
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recipes <span class="caret"></span></a>
             <ul class="dropdown-menu">
