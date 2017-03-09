@@ -12,6 +12,7 @@ class ChefsListingTest < ActionDispatch::IntegrationTest
   end
   
   test "should get chefs listing" do
+    sign_in_as(@admin_chef, "password")
     get chefs_path
     assert_template 'chefs/index'
     assert_select "a[href=?]", chef_path(@chef), text: @chef.chef_name.capitalize
