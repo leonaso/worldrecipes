@@ -1,4 +1,4 @@
-<%= render 'shared/page_title', title: 'Available ingredients' %>
+<%= render 'shared/page_title', title: 'Available Ingredients' %>
 
 <div align="center">
   <%= will_paginate %>
@@ -10,6 +10,8 @@
           <li><small><%= pluralize(ing.recipes.count, "recipe") if ing.recipes %></small></li>
           <% if logged_in? && current_chef.admin? %>        
             <li><%= link_to "Edit this ingredient", edit_ingredient_path(ing) %>
+          <% end %>  
+          <% if logged_in? && current_chef.admin? && !chef.admin? %>        
             <li><%= link_to "Delete this ingredient", ingredient_path(ing), method: :delete,
                   data: {confirm: "Are you sure yu want to delete this ingredient?"} %></li>
           <% end %>
