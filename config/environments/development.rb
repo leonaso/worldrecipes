@@ -53,6 +53,6 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   config.action_cable.disable_request_forgery_protection = true
   
-  config.web_socket_server_url = "wss://fritanga-lscloud.c9users.io/cable"
-  config.action_cable.allowed_request_origins = ["https://fritanga-lscloud.c9users.io", "http://fritanga-lscloud.c9users.io"]
+  #config.web_socket_server_url = "wss://fritanga-lscloud.c9users.io/cable"
+  #config.action_cable.allowed_request_origins = ["https://fritanga-lscloud.c9users.io", "http://fritanga-lscloud.c9users.io"]
 end
