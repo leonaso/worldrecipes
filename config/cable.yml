@@ -1,9 +1,11 @@
 development:
   adapter: async
+  url: wss://fritanga-lscloud.c9users.io
 
 test:
   adapter: async
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
+  url: <%= ENV["REDIS_URL"] %>
+#  url: redis://localhost:6379/1
