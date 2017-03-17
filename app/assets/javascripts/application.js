@@ -15,7 +15,7 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
-// require cable
+//= require cable
 
 /*
 function scrollToBottom() {

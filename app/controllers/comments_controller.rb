@@ -1,9 +1,14 @@
 class CommentsController < ApplicationController
   before_action :require_user
   
+  def new
+    @comment = Comment.new
+  end
+  
   def create
     @recipe = Recipe.find(params[:recipe_id])
-    @comment = @recipe.comments.build(comment_params)
+    #@comment = @recipe.comments.build(comment_params)
+    @comment = @recipe.comments.new(comment_params)
     @comment.chef = current_chef
     if @comment.save
       ActionCable.server.broadcast "comments", render(partial: 'comments/comment', object: @comment)

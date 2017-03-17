@@ -35,8 +35,8 @@
   gem 'bootstrap-will_paginate', '~> 0.0.10'
   # Use Capistrano for deployment
   # gem 'capistrano-rails', group: :development
-  # gem 'carrierwave', '~> 1.0'
-  # gem 'mini_magick'
+  gem 'carrierwave', '~> 1.0'
+  gem 'mini_magick'
   # gem 'fog'
 
   group :development, :test do

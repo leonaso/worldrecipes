@@ -1,10 +1,10 @@
 module ApplicationCable
   class Connection < ActionCable::Connection::Base
-    
     identified_by :current_chef
     
     def connect
       self.current_chef = find_current_user
+      logger.add_tags 'ActionCable', current_chef.chef_name
     end
     
     def disconnect
