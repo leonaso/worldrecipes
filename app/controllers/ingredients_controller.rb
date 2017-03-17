@@ -33,7 +33,8 @@ class IngredientsController < ApplicationController
   def update
     if @ingredient.update(ingredient_params)
       flash[:success] = "Ingredient was updated successfully!"
-      redirect_to ingredient_path(@ingredient)
+      #redirect_to ingredient_path(@ingredient)
+      redirect_to @ingredient
     else
       render 'edit'
     end

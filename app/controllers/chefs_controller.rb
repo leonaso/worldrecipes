@@ -29,7 +29,7 @@ class ChefsController < ApplicationController
   end
   
   def edit
-    @chef = Chef.find(params[:id])
+    #@chef = Chef.find(params[:id])
   end
   
   def update
@@ -60,9 +60,9 @@ class ChefsController < ApplicationController
     end
     
     def require_same_user
-      if current_chef != @chef && !current_chef.admin?
+      if current_chef != @chef and !current_chef.admin?
         flash[:danger] = "You can only change your own account"
-        redirect_to chef_path
+        redirect_to chefs_path
       end
     end
 
