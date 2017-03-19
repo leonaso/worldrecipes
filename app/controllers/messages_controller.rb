@@ -5,22 +5,23 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
     @message.chef = current_chef
     if @message.save
-      ActionCable.server.broadcast 'chatroom_channel', message: render_message(@message),
+      #redirect_to chat_path
+      #ActionCable.server.broadcast "chatrooms", render(partial: 'messages/message', object: @message)
+       
+      ActionCable.server.broadcast 'chatrooms', message: render_message(@message),
                                                         chef: @message.chef.chef_name
     else
       render 'chatrooms/show'
     end
-      
   end
   
   private
-  
-  def message_params
-    params.require(:message).permit(:content)
-  end
+    def message_params
+      params.require(:message).permit(:content)
+    end
 
-  def render_message(message)
-    render(partial: 'message', locals: {message: message})
-  end
+    def render_message(message)
+      render(partial: 'message', locals: {message: message})
+    end
   
 end

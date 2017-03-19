@@ -17,13 +17,32 @@
 //= require_tree .
 //= require cable
 
-/*
+
+
 function scrollToBottom() {
   if ($('#messages').length > 0) {
     $('#messages').scrollTop($('#messages')[0].scrollHeight);
   }
 }
 
+function scrollToBottomChat() {
+  if ($('#ChefChats').length > 0) {
+    $('#ChefChats').scrollTop($('#ChefChats')[0].scrollHeight);
+  }
+}
+
+$(document).ready(function() {
+  scrollToBottom();
+});
+
+$(document).ready(function() {
+  scrollToBottomChat();
+});
+
+
+
+
+/*
 function submitMessage(event) {
   event.preventDefault();
   $('#new_message').submit();

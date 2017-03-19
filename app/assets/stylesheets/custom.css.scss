@@ -70,9 +70,9 @@ body {
   height: 100%;
 }
 
-footer {
-  margin-top: 45px;
-  margin-bottom: 45px;
+.footer {
+  margin-top: 245px;
+  margin-bottom: 5px;
   border-top: 1px solid #047033;
   color: #777;
   padding-top: 5px;
@@ -80,24 +80,24 @@ footer {
   padding-right: 10px;
 }
 
-footer a {
+.footer a {
   color: #555;
 }
 
-footer a:hover {
+.footer a:hover {
   color: #222;
 }
 
-footer small {
+.footer small {
   float: left;
 }
 
-footer ul {
+.footer ul {
   float: right;
   list-style: none;
 }
 
-footer ul li {
+.footer ul li {
   float: left;
   margin-left: 15px;
   list-style: none;
@@ -156,7 +156,7 @@ footer ul li {
   left: 0;
   right: 0;
   top: 150px;
-  width: 80%;
+  width: 80;
 }
 
 .message-container {
@@ -178,7 +178,7 @@ footer ul li {
 }
 
 .messages {
-  border: 1px solid #eaeaea;
+  border: 5px solid #eaeaea;
   height: 16em;
   position: relative;
   overflow: auto;
