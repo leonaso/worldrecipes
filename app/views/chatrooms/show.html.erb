@@ -8,11 +8,10 @@
     <hr />
     <div class="message-container">
       <%= form_for(@message, remote: true, :html => {class: "form-horizontal", role: "form"}) do |f| %>
-      <%#= form_for(@message, :html => {class: "form-horizontal", role: "form"}) do |f| %>
-        <%= f.text_area :content, class: "form-control", placeholder: "Enter text" %>
-<!--        data: {behavior: "room_speaker"}, placeholder: "Enter message" %> -->
-        <%= f.submit "Send", class: "btn btn-primary" %>
-<!--        , data: {send: "message"} %> -->
+        <div class="form-group">
+          <%= f.text_area :content, class: "form-control", data: {behavior: "room_speaker"}, placeholder: "Enter message" %>
+          <%= f.submit "Send", class: "btn btn-primary btn-lg btn-xlarge", data: {send: "message"} %>
+        </div>
       <% end %>
     </div>
   </div>

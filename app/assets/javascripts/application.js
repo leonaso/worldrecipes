@@ -31,22 +31,10 @@ function scrollToBottomChat() {
   }
 }
 
-$(document).ready(function() {
-  scrollToBottom();
-});
-
-$(document).ready(function() {
-  scrollToBottomChat();
-});
-
-
-
-
-/*
 function submitMessage(event) {
   event.preventDefault();
   $('#new_message').submit();
-}
+};
 
 $(document).on('keypress', '[data-behavior~=room_speaker]', function(event) {
   if (event.keyCode == 13) {
@@ -58,6 +46,19 @@ $(document).on('click', '[data-send~=message]', function(event) {
   submitMessage(event);
 });
 
+$(document).ready(function() {
+  $("#new_message").on("ajax:complete", function(e, data, status) {
+    $('.message .content').val('');
+  });
+  scrollToBottomChat();
+});
+
+$(document).ready(function() {
+  scrollToBottom();
+});
+
+
+/*
 $(document).on('turbolinks:load', function() {
   $("#new_message").on("ajax:complete", function(e, data, status) {
     $('#message_content').val('');
