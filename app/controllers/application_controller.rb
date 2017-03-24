@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   # restrict action to logged in user only
   def require_user
     if !logged_in?
-      flash[:danger] = "You must be logged in to permorm this action"
+      flash[:danger] = "You must be logged in to permform this action"
       redirect_to root_path
     end
   end

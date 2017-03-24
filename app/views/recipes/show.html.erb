@@ -37,18 +37,27 @@
   </div>
 </div>
 
+<!-- Display liking, recipe's chef liking is disabled-->
 <div class="row liking">
   <div class="row col-md-8 col-md-offset-2">
-    <%= link_to like_recipe_path(@recipe, like: true), method: :post do %>
+    <% if current_chef != @recipe.chef %>
+      <%= link_to like_recipe_path(@recipe, like: true), method: :post do %>
+        <i class="glyphicon glyphicon-thumbs-up"></i> 
+      <% end %>
+      <%= @recipe.thumbs_up_total %> || 
+      <%= link_to like_recipe_path(@recipe, like: false), method: :post do %>
+        <i class="glyphicon glyphicon-thumbs-down"></i>
+      <% end %> 
+      <%= @recipe.thumbs_down_total %>
+    <% else %>
       <i class="glyphicon glyphicon-thumbs-up"></i> 
-    <% end %> <%= @recipe.thumbs_up_total %> || 
-    <%= link_to like_recipe_path(@recipe, like: false), method: :post do %>
+      <%= @recipe.thumbs_up_total %> || 
       <i class="glyphicon glyphicon-thumbs-down"></i>
-    <% end %> <%= @recipe.thumbs_down_total %>
+    <% end %>  
   </div>
 </div>
 
-<!-- Display form to create a comment  -->
+<!-- Display form to create a comment current_chef -->
 <% if logged_in? %>
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
