@@ -2,7 +2,7 @@
 
 <div class="well col-md-8 col-md- offset-2">
   <div align="center">
-    <%#= image_tag @recipe.image.url if @recipe.image? %>
+    <%= image_tag @recipe.image.url if @recipe.image? %>
   </div>
   <h4 class="center description"><strong>Steps: </strong></h4>
   <hr/>
@@ -80,9 +80,7 @@
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <h3>Prior Comments: </h3>
-      <!-- <div id="messages">   -->
         <%= render partial: "comments/comments", object: @comments %>
-      <!-- </div>    -->
     </div>
   </div>
 <% else %>
