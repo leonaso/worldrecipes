@@ -9,7 +9,7 @@ class Recipe < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
   default_scope -> { order(updated_at: :desc)}
-  #mount_uploader :image, ImageUploader
+  mount_uploader :image, ImageUploader
   #validates_processing_of :image
   #validate :image_size_validation
   
