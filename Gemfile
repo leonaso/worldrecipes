@@ -3,9 +3,10 @@
     repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
     "https://github.com/#{repo_name}.git"
   end
-
   # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
   gem 'rails', '~> 5.0.1'
+  # use Ruby gem 'ruby', '~> 2.3.0'
+  #gem 'ruby', '>= 2.3.0'
   # Use gem 'bootstrap-sass', '~> 3.3.6'
   gem 'bootstrap-sass', '~> 3.3.6'
   # Use Puma as the app server
@@ -60,7 +61,7 @@
   # Production database
   group :production do
     gem 'pg'
-    #gem 'redis'
+    gem 'redis'
   end
 
   # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
