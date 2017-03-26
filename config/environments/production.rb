@@ -83,6 +83,6 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  config.web_socket_server_url = "wss://https://fritanga-lscloud.c9users.io/cable"
-  config.action_cable.allowed_request_origins = ['https://fritanga-lscloud.c9users.io', 'http://fritanga-lscloud.c9users.io']
+  config.web_socket_server_url = "wss://alcarbon.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://alcarbon.herokuapp.com', ' http://alcarbon.herokuapp.com']
 end
