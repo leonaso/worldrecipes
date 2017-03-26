@@ -35,9 +35,9 @@
   gem 'bootstrap-will_paginate', '~> 0.0.10'
   # Use Capistrano for deployment
   # gem 'capistrano-rails', group: :development
-  gem 'carrierwave', '~> 1.0'
-  gem 'mini_magick'
-  gem 'fog'
+  #gem 'carrierwave', '~> 1.0'
+  #gem 'mini_magick'
+  #gem 'fog'
 
   group :development, :test do
     # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -60,7 +60,7 @@
   # Production database
   group :production do
     gem 'pg'
-    gem 'redis'
+    #gem 'redis'
   end
 
   # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
