@@ -43,7 +43,7 @@
     </div>
     <div class="col-md-2">
       <%#= image_tag("Tomates.jpg", size: "150x100", alt: "Looks good") if recipe.image? %>
-      <%= image_tag(recipe.image.url, size: "150x100", alt: "Looks good") if recipe.image? %>
+      <%= image_tag(recipe.image.url, size: "150x100", alt: "Looks good", class: "custom-image-style") if recipe.image? %>
     </div>
   </div>
 <% end %>
