@@ -10,6 +10,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # storage :fog
   # storage :file
   if Rails.env.production?
+#    storage :fog
     CarrierWave.configure do |config|
       config.fog_credentials = {
         :provider => 'AWS',
@@ -19,7 +20,6 @@ class ImageUploader < CarrierWave::Uploader::Base
       }
       config.fog_directory = ENV['S3_BUCKET']
     end
-#    storage :fog
   else
     storage :file
   end
