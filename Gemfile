@@ -47,8 +47,14 @@
     gem 'sqlite3'
     # use 'rails-controller-testing'
     gem 'rails-controller-testing'
+    # use Rspec for testing
+    gem 'rspec-rails', '>= 3.2.3'
   end
-
+  
+  group :test do
+    gem 'capybara', '>= 2.4.4'
+  end
+  
   group :development do
     # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
     gem 'web-console', '>= 3.3.0'
