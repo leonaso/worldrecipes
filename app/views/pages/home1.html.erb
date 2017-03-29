@@ -1,16 +1,9 @@
 <div class="jumbotron center">
   <h1>Welcome To AlCarbon App</h1>
   <h2>The world best recipes</h2>
-  <% if logged_in? %>
-    <p>
-      <%= link_to "View All Recipes", recipes_path, class: "btn btn-danger btn-lg btn-xlarge" %>
-    </p>
-  <% else %>
-    <p>
-      <%= link_to "Sign up today", signup_path, class: "btn btn-danger btn-lg btn-xlarge" %>
-      <%= link_to "View All Recipes", recipes_path, class: "btn btn-danger btn-lg btn-xlarge" %>
-    </p>
-  <% end %>
+<!--  <p><#%= link_to "Sign Up or Log In", "#", class: "btn btn-danger btn-lg btn-xlarge" %></p> -->
+  <p><%= link_to "Sign up today", signup_path, class: "btn btn-danger btn-lg btn-xlarge" %>
+    <%= link_to "View All Recipes", recipes_path, class: "btn btn-danger btn-lg btn-xlarge" %></p>
 </div>
 
 <!-- Example row of columns -->
